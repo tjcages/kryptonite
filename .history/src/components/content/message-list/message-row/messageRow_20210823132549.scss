@@ -1,0 +1,18 @@
+.message-row {
+  gap: 24px;
+  padding: 24px 36px;
+}
+
+.name-subject-fields {
+  display: flex;
+  flex-direction: column;
+
+  .name-field {
+    backgroud: black;
+    padding: 12px 16px;
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+}

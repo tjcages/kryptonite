@@ -1,0 +1,37 @@
+.message-row {
+  gap: 24px;
+  padding: 24px 36px;
+  background: white;
+  margin: 24px 36px;
+
+  .content-actions {
+    margin-left: 36px;
+    opacity: 0;
+  }
+}
+
+.message-row:hover {
+  .content-actions {
+    opacity: 1;
+  }
+}
+
+.name-subject-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .name-field {
+    background: black;
+    color: white;
+    padding: 8px 12px;
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+
+  .more {
+    text-decoration: underline;
+  }
+}

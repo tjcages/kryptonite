@@ -1,0 +1,39 @@
+.header {
+  color: #000;
+  .header-logo {
+    display: flex;
+    flex: 1 1;
+    font-weight: 600;
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  .header-search {
+    display: flex;
+    flex: 5 1;
+    .user-name {
+      cursor: default;
+      user-select: none;
+    }
+    .profile-pic {
+      height: 36px;
+      width: auto;
+      border-radius: 50%;
+    }
+  }
+}
+
+.user-profile {
+  position: fixed;
+  left: 24px;
+  bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  h4 {
+    margin: auto 0;
+  }
+}

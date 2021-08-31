@@ -1,0 +1,130 @@
+ /* some basic styles. nothing to do with flexbox */
+ header, footer,
+ nav, article, aside {
+   border: 0px solid silver;
+   padding: 0;
+   margin: 0px;
+
+ }
+
+
+ html, body, .viewport {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+
+   font-size: 12px;
+ }
+
+div#root {
+
+
+  display: -webkit-flex;
+  display:    -moz-flex;
+  display:     -ms-flex;
+  display:         flex;
+
+  -webkit-flex-direction: column;
+     -moz-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          
+ }
+
+h4, p {
+  font-size: 14px;
+}
+
+/* h3 {
+  font-size: 16px;
+} */
+
+
+ .vbox {
+
+   display: -webkit-flex;
+   display:    -moz-flex;
+   display:     -ms-flex;
+   display:         flex;
+
+   -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+       -ms-flex-direction: column;
+           flex-direction: column;
+ }
+
+ /* items flex/expand horizontally */
+ .hbox {
+   display: -webkit-flex;
+   display:    -moz-flex;
+   display:     -ms-flex;
+   display:         flex;
+
+   -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+       -ms-flex-direction: row;
+           flex-direction: row;
+ }
+
+ .space-between {
+   -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+       -ms-justify-content: space-between;
+           justify-content: space-between;
+ }
+
+ header, footer {
+   height: 50px;
+ }
+
+ .main {
+   -webkit-flex: 1;
+      -moz-flex: 1;
+       -ms-flex: 1;
+           flex: 1;
+       overflow: auto;
+ }
+
+ article {
+   -webkit-flex: 5;
+      -moz-flex: 5;
+       -ms-flex: 5;
+           flex: 5;
+ }
+
+ aside, nav {
+   -webkit-flex: 1;
+      -moz-flex: 1;
+       -ms-flex: 1;
+           flex: 1;
+ }
+
+ .btn {
+  background: white;
+  border: 1.5px solid #e7e7e9;
+  border-radius: 8px;
+  padding: 16px 16px;
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  background: #f2f2f3;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+}
+
+.action-btn:hover {
+  background: #e7e7e9;
+}

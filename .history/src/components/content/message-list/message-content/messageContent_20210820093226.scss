@@ -1,0 +1,49 @@
+.message-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  // top: 50px;
+  // bottom: 10px;
+  > iframe {
+    width: 98%;
+    height: 98%;
+    border: 0;
+  }
+}
+
+.message-header {
+  // width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 36px;
+  margin: 0 20%;
+  margin-bottom: 32px;
+
+  .message-profile {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .content-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin: auto 0;
+  }
+}
+
+.profile-avatar {
+  border-radius: 50%;
+  background: red;
+}
+
+.profile-avatar.medium {
+  background: blue;
+  width: 50px;
+  height: 50px;
+}

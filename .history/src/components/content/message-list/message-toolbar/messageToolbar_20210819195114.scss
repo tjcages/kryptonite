@@ -1,0 +1,24 @@
+.message-toolbar {
+  height: 50px;
+  .action-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .action-btn {
+      cursor: pointer;
+      display: inline-block;
+    }
+  }
+}
+
+.right-align {
+  position: absolute;
+  top: 64px;
+  right: 36px;
+  z-index: 1;
+}
+
+.btn {
+  background: red;
+}

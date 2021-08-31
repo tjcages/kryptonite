@@ -1,0 +1,78 @@
+import React, { PureComponent } from "react";
+import "./header.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import debounce from "lodash/debounce";
+
+export class Header extends PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSearchClick = this.handleSearchClick.bind(this);
+    this.performSearch = debounce(this.performSearch.bind(this), 1000);
+  }
+
+  handleSearchClick(evt) {
+    if (this.props.searhQuery !== "") {
+      this.performSearch();
+    }    
+  }
+
+  handleInputChange(evt) {
+    this.props.setSearchQuery(evt.target.value);  
+    this.performSearch();
+  }
+
+  performSearch() {
+    const searchParams = {}
+    if (!this.props.searchQuery || this.props.searchQuery === "") {
+      searchParams.labelIds = ["INBOX"];
+    }
+    this.props.getLabelMessages({...searchParams})
+  }
+
+  render() {
+    // const userInfo = this.props.googleUser.w3;
+    // const email = userInfo.U3;
+    // const fullName = userInfo.ig;
+    // const picUrl = userInfo.Paa;
+
+    return (
+      <header className="d-flex p-3 align-content-center align-items-center header">
+        <div className="header-search">
+          <div className="input-group w-75 ml-1 mr-auto">
+            <input
+              type="search"
+              className="form-control border-light"
+              placeholder="Search mail"
+              value={this.props.searchQuery}
+              onChange={this.handleInputChange}
+            />
+            <div className="input-group-append" onClick={this.handleSearchClick}>
+              <button
+                className="btn btn-light btn-outline-light bg-white text-dark"
+                type="button"
+              >
+                <FontAwesomeIcon icon={faSearch} />
+              </button>
+            </div>
+          </div>
+          <div className="user-profile">
+            <div className="input-group">
+              <img className="mx-2 profile-pic" src={"https://cdn.dribbble.com/users/907810/avatars/normal/132478660014028bb102f26d71996679.png?1529987639"} alt="" />
+              <h4 className="user-name" title="tylerjcagle@gmail.com">
+                {/* {fullName} */}
+                Tyler J. Cagle
+              </h4>
+            </div>
+            <button title="Sign out of Gmail" onClick={this.props.onSignout} className='btn btn-light bg-light'>Sign Out</button>
+          </div>
+        </div>
+      </header>
+    );
+  }
+}
+
+export default Header;

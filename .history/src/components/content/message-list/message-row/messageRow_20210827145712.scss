@@ -1,0 +1,40 @@
+.message-row {
+  background: white;
+  margin: 24px 36px;
+  border-radius: 12px;
+  transition: all 0.1s ease-out;
+
+  .content-actions {
+    margin-left: 36px;
+    opacity: 0;
+  }
+}
+
+.message-row:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+  .content-actions {
+    opacity: 1;
+  }
+}
+
+.name-subject-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .name-field {
+    background: black;
+    color: white;
+    padding: 8px 12px;
+  }
+
+  h3 {
+    font-weight: 700;
+  }
+
+  .more {
+    text-decoration: underline;
+  }
+}
+
