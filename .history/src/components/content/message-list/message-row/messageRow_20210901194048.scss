@@ -1,0 +1,84 @@
+.message-row {
+  background: #282B35;
+  transition: all 0.1s ease-out;
+  overflow: hidden;
+  margin: 0;
+  // max-width: 800px;
+
+  .content-actions {
+    margin: 36px;
+    margin-top: 0;
+  }
+}
+
+.category-label {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 24px 36px;
+  margin: 0;
+  background: #282B35;
+}
+
+.message-image {
+  min-width: 72px;
+  max-width: 72px;
+  min-height: 72px;
+  max-height: 72px;
+  border-radius: 16px;
+  background: red;
+}
+
+.message-row:hover {
+  background: black;
+}
+
+.name-subject-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 16px;
+
+  .name-fields {
+    gap: 4px;
+
+    .date {
+      opacity: 0.6
+    }
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .more {
+    text-decoration: underline;
+  }
+}
+
+.mini-frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 264px;
+  margin: 36px;
+  margin-top: 0;
+  border-radius: 24px;
+  width: 60%;
+
+  .iview {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    left: 0;
+    padding: 24px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.1) 100%);
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}

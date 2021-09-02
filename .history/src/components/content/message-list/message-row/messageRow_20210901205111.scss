@@ -1,0 +1,126 @@
+.message-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  background: #282B35;
+  transition: all 0.1s ease-out;
+  overflow: hidden;
+  margin: 0;
+
+  .message-horizontal-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+  // max-width: 800px;
+
+  .content-actions {
+    margin: 36px;
+    margin-top: 0;
+  }
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 24px 36px;
+  padding-bottom: 0;
+  margin: 0;
+  margin-right: 16px;
+  background: #282B35;
+
+  cursor: pointer;
+
+  .category-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  h4 {
+    margin: auto 0;
+  }
+}
+
+.message-image {
+  min-width: 72px;
+  max-width: 72px;
+  min-height: 72px;
+  max-height: 72px;
+  border-radius: 16px;
+  background: red;
+  margin-top: 36px;
+  margin-left: 36px;
+}
+
+.message-row:hover {
+  background: black;
+}
+
+.name-subject-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 36px;
+  padding-right: 36px;
+
+  .name-fields {
+    gap: 4px;
+
+    .date {
+      opacity: 0.6
+    }
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .more {
+    text-decoration: underline;
+  }
+}
+
+.message-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 36px;
+
+  margin: 0 36px;
+  margin-bottom: 24px;
+
+  .first-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .second-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .action-item {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    cursor: pointer;
+
+    .action-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    h4 {
+      margin: 2px 0;
+    }
+  }
+}
